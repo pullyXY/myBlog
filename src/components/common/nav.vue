@@ -66,6 +66,7 @@ export default {
 .nav {
   /* 左边部分内容的边框.右 */
   border-right: 1px solid rgb(232, 232, 232);
+ 
 }
 .user {
   margin-top: 20px;

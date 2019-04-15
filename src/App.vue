@@ -11,8 +11,10 @@
           <div class="content">
             <!-- 分左右两块 -->
             <a-row>
-              <a-col :span="5"><Nav></Nav></a-col>
-              <a-col :span="19"><Home></Home></a-col>
+              <a-col :span="5" class="leftNav"><Nav></Nav></a-col>
+              <!-- position:fixed;脱离文档流 ，在写一个一样大小的占位 -->
+              <a-col :span="5"></a-col>
+              <a-col :span="19" class="home"><Home></Home></a-col>
             </a-row>
           </div>
         </a-layout-content>
@@ -42,6 +44,14 @@ export default {
 </script>
 
 <style>
+.leftNav {
+  position: fixed!important;
+  top: 115px;
+  left: 0;
+  height: calc(100vh - 135px);
+  overflow: auto;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
